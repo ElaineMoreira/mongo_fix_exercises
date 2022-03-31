@@ -51,3 +51,9 @@ db.inventory.find(
   { status: "A", item: "Headset" }
   )
 
+// =================== contar quantos "Headset" tem =================== //
+
+use('data')
+db.inventory.find(
+  { item: "Headset" }
+).count()
