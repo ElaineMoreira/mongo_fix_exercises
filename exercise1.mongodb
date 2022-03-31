@@ -5,3 +5,11 @@ db.inventory.insertOne({
   size: { h: 14, w: 21, uom: "cm" },
   status: "A"
 })
+
+use('data')
+db.inventory.insertOne({
+  item: "Notebook",
+  qty: 50,
+  size: { h: 8, w: 11, uom: "in" },
+  status: "A"
+})
