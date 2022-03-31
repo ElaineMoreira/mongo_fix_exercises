@@ -35,3 +35,12 @@ db.inventory.insertMany(
     status: "A" }
 ]
 )
+// ============ fazer uma pesquisa de todos os documentos de inventory ============= //
+
+use('data')
+db.inventory.find();
+
+// ============ buscar produtos com status "D" nos documentos de inventory ============= //
+use('data')
+db.inventory.find({ status: "D" })
+
