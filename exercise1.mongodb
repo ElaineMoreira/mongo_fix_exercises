@@ -44,3 +44,10 @@ db.inventory.find();
 use('data')
 db.inventory.find({ status: "D" })
 
+// =========== buscar produtos que tenham status "D" e item: "Headset"
+
+use('data')
+db.inventory.find(
+  { status: "A", item: "Headset" }
+  )
+
