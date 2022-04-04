@@ -1,0 +1,6 @@
+// ====´ṕesquisas no banco filmes ==== //
+
+/**contando documentos */
+use('filter');
+db.filmes.estimatedDocumentCount()
+/** */
