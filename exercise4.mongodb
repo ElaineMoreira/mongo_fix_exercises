@@ -45,3 +45,13 @@ db.filmes.find().sort({ ano: -1 })
 /**colocar em ordem descrecente por ano e titulo */
 use('filter');
 db.filmes.find().sort({ ano: -1 }, { titulo: -1 })
+/**operadores delete */
+/**apaga todos os filmes */
+use('filter');
+db.filmes.deleteOne({});
+/**apaga somemente o filme escolhido */
+use('filter');
+db.filmes.deleteOne({ titulo: "Os Oito Odiados" })
+/**apaga filmes com avaliacao ruim menor que 2 */
+use('filter');
+db.filmes.deleteMany({ "avaliacao.ruim": { $lt: 2 } })
