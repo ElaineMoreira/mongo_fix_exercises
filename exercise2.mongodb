@@ -1,0 +1,5 @@
+// ======= insere um nome ========== //
+use('data')
+db.inventory.insertOne({
+  name: "Elaine Moreira"
+})
