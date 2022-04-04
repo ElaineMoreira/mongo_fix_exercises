@@ -24,4 +24,6 @@ db.inventory.insertOne({
   }
 });
 
-// ========pesquisas=============//
+// ====== pesquisas, dados do joe ======//
+use('data')
+db.inventory.find({_id: "joe"}, {_id: 0})
