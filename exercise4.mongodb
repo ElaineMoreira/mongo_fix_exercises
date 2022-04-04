@@ -21,3 +21,10 @@ db.filmes.find({ ano: { $eq: 1993 } });
 /**pesquisa filmes que avaliacao no modo bom seja maior que 6 */
 use('filter');
 db.filmes.find({ "avaliacao.bom": { $gt: 6 } })
+/**filtra filmes ruins com nota abaixo de 5 */
+use('filter');
+db.filmes.find({ "avaliacao.ruim": { $lt: 5 } })
+/**filmes bons com nota maior que 6
+gosto de filmes ruins com nota menor que 5 */
+use('filter');
+db.filmes.find({ "avaliacao.bom": { $gt:6 }, "avaliacao.ruim": { $lt: 5 } })
