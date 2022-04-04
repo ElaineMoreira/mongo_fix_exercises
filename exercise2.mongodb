@@ -35,4 +35,4 @@ db.inventory.find({"address.state": "MG", "address.city": "laneville"},
 
 // ==== me retorna pesquisa com limite de ate 2 ====== //
 use('data')
-db.inventory.find().limit(2)
+db.inventory.find().limit()
