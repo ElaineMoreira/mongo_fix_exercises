@@ -28,3 +28,7 @@ db.filmes.find({ "avaliacao.ruim": { $lt: 5 } })
 gosto de filmes ruins com nota menor que 5 */
 use('filter');
 db.filmes.find({ "avaliacao.bom": { $gt:6 }, "avaliacao.ruim": { $lt: 5 } })
+/**operador "and" */
+/**filtra filmes que sao maiores que o ano 2000 "e" tem avaliacao no modo bom maior igual a 8 */
+use('filter');
+db.filmes.find({ $and: [{ ano: { $gt: 2000 } }, {"avaliacao.bom": { $gte: 8 } }] })
