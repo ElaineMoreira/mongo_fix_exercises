@@ -32,3 +32,7 @@ db.inventory.find({_id: "joe"}, {_id: 0})
 use('data')
 db.inventory.find({"address.state": "MG", "address.city": "laneville"}, 
 {address: 0})
+
+// ==== me retorna pesquisa com limite de ate 2 ====== //
+use('data')
+db.inventory.find().limit(2)
