@@ -11,4 +11,13 @@ use('filter');
 db.filmes.find({ano: { $lte: 1993 } });
 /**pesquisa filmes com o ano mair que 1993 */
 use('filter');
-db.filmes.find({ ano: { $gt: 1993 } });
+db.filmes.find({ ano: { $gt: 2000 } });
+/**pesquisa filmes com o ano maior igual a 2000 */
+use('filter');
+db.filmes.find({ ano: { $gte: 2000 } });
+/**pesquisa filmes com o igual a 1993 */
+use('filter');
+db.filmes.find({ ano: { $eq: 1993 } });
+/**pesquisa filmes que avaliacao no modo bom seja maior que 6 */
+use('filter');
+db.filmes.find({ "avaliacao.bom": { $gt: 6 } })
