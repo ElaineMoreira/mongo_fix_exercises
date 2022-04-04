@@ -27,3 +27,8 @@ db.inventory.insertOne({
 // ====== pesquisas, dados do joe ======//
 use('data')
 db.inventory.find({_id: "joe"}, {_id: 0})
+
+// === pesquisa ==== //
+use('data')
+db.inventory.find({"address.state": "MG", "address.city": "laneville"}, 
+{address: 0})
