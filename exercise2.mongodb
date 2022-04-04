@@ -3,3 +3,25 @@ use('data')
 db.inventory.insertOne({
   name: "Elaine Moreira"
 })
+
+// ======= insere dados de uma pessoa(objeto)==== //
+use('data')
+db.inventory.insertOne({
+  name: "Floki",
+  Skills: "cachorro, sapeca, teimoso"
+})
+
+// ==== insere mais dados de uma pessoa ==== //
+use('data')
+db.inventory.insertOne({
+  _id: "joe",
+  name: "Stark Moreira",
+  address: {
+    street: "rua das piramides 7",
+    city: "laneville",
+    state: "MG",
+    zip: "12345"
+  }
+});
+
+// ========pesquisas=============//
