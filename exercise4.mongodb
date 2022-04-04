@@ -42,3 +42,6 @@ db.filmes.find().sort({ ano: 1 })
 /**colocando em ordem decrescente */
 use('filter');
 db.filmes.find().sort({ ano: -1 })
+/**colocar em ordem descrecente por ano e titulo */
+use('filter');
+db.filmes.find().sort({ ano: -1 }, { titulo: -1 })
