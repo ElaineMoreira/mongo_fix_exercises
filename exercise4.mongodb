@@ -9,3 +9,6 @@ db.filmes.find({ano: { $lt: 1993 } });
 /** pesquisa filmes com o ano igual ou menor a 1993 */
 use('filter');
 db.filmes.find({ano: { $lte: 1993 } });
+/**pesquisa filmes com o ano mair que 1993 */
+use('filter');
+db.filmes.find({ ano: { $gt: 1993 } });
