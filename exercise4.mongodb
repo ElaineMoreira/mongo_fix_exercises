@@ -36,3 +36,9 @@ db.filmes.find({ $and: [{ ano: { $gt: 2000 } }, {"avaliacao.bom": { $gte: 8 } }]
 /**filtra filmes que sao maiores que o ano 2000 "ou" que tem avaliacao no modo bom igual a 8 */
 use('filter');
 db.filmes.find({ $or: [{ ano: { $gt: 2000 } }, { "avaliacao.bom": { $gte: 8 } } ] })
+/**colocando em ordem crescente por ano */
+use('filter');
+db.filmes.find().sort({ ano: 1 })
+/**colocando em ordem decrescente */
+use('filter');
+db.filmes.find().sort({ ano: -1 })
