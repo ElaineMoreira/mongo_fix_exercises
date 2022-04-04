@@ -32,3 +32,7 @@ db.filmes.find({ "avaliacao.bom": { $gt:6 }, "avaliacao.ruim": { $lt: 5 } })
 /**filtra filmes que sao maiores que o ano 2000 "e" tem avaliacao no modo bom maior igual a 8 */
 use('filter');
 db.filmes.find({ $and: [{ ano: { $gt: 2000 } }, {"avaliacao.bom": { $gte: 8 } }] })
+/**operador or */
+/**filtra filmes que sao maiores que o ano 2000 "ou" que tem avaliacao no modo bom igual a 8 */
+use('filter');
+db.filmes.find({ $or: [{ ano: { $gt: 2000 } }, { "avaliacao.bom": { $gte: 8 } } ] })
